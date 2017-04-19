@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/excellenteasy/grunt-image-resize"
-
-    >grunt-image-resize (v1.0.0)</a>
+    <a href="https://github.com/excellenteasy/grunt-image-resize">grunt-image-resize (v1.0.0)</a>
 </h1>
 <h4>Resizing images made easy.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-image-resize">module grunt-image-resize</a><ol>
 
@@ -91,18 +84,18 @@
   grunt.initConfig({
     jshint: {
       all: [
-        &#x27;Gruntfile.js&#x27;,
-        &#x27;tasks/*.js&#x27;,
-        &#x27;&#x3c;%= nodeunit.tests %&#x3e;&#x27;
+        'Gruntfile.js',
+        'tasks/*.js',
+        '&lt;%= nodeunit.tests %&gt;'
       ],
       options: {
-        jshintrc: &#x27;.jshintrc&#x27;
+        jshintrc: '.jshintrc'
       },
     },
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: [&#x27;tmp/*&#x27;]
+      tests: ['tmp/*']
     },
 
     // Configuration to be run (and then tested).
@@ -112,10 +105,10 @@
       },
       resize: {
         files: [
-          {&#x27;tmp/gnu.jpg&#x27;: &#x27;test/fixtures/gnu.jpg&#x27;},
-          {&#x27;tmp/wikipedia.png&#x27;: &#x27;test/fixtures/wikipedia.png&#x27;},
-          {&#x27;tmp/Rhododendron.jpg&#x27;: &#x27;test/fixtures/Rhododendron.jpg&#x27;},
-          {&#x27;tmp/TeslaTurbine.png&#x27;: &#x27;test/fixtures/TeslaTurbine.png&#x27;}
+          {'tmp/gnu.jpg': 'test/fixtures/gnu.jpg'},
+          {'tmp/wikipedia.png': 'test/fixtures/wikipedia.png'},
+          {'tmp/Rhododendron.jpg': 'test/fixtures/Rhododendron.jpg'},
+          {'tmp/TeslaTurbine.png': 'test/fixtures/TeslaTurbine.png'}
         ]
       },
       no_overwrite: {
@@ -125,10 +118,10 @@
           overwrite: false
         },
         files: [
-          {&#x27;tmp/gnu.jpg&#x27;: &#x27;test/fixtures/gnu.jpg&#x27;},
-          {&#x27;tmp/wikipedia.png&#x27;: &#x27;test/fixtures/wikipedia.png&#x27;},
-          {&#x27;tmp/Rhododendron.jpg&#x27;: &#x27;test/fixtures/Rhododendron.jpg&#x27;},
-          {&#x27;tmp/TeslaTurbine.png&#x27;: &#x27;test/fixtures/TeslaTurbine.png&#x27;}
+          {'tmp/gnu.jpg': 'test/fixtures/gnu.jpg'},
+          {'tmp/wikipedia.png': 'test/fixtures/wikipedia.png'},
+          {'tmp/Rhododendron.jpg': 'test/fixtures/Rhododendron.jpg'},
+          {'tmp/TeslaTurbine.png': 'test/fixtures/TeslaTurbine.png'}
         ]
       },
       upscale: {
@@ -138,7 +131,7 @@
           upscale: true
         },
         files: [
-          {&#x27;tmp/upscale.png&#x27;: &#x27;test/fixtures/upscale.png&#x27;}
+          {'tmp/upscale.png': 'test/fixtures/upscale.png'}
         ]
       },
       upscale2: {
@@ -148,7 +141,7 @@
           upscale: true
         },
         files: [
-          {&#x27;tmp/upscale2.png&#x27;: &#x27;test/fixtures/upscale2.png&#x27;}
+          {'tmp/upscale2.png': 'test/fixtures/upscale2.png'}
         ]
       },
       no_upscale: {
@@ -158,7 +151,7 @@
           upscale: false
         },
         files: [
-          {&#x27;tmp/no_upscale.png&#x27;: &#x27;test/fixtures/no_upscale.png&#x27;}
+          {'tmp/no_upscale.png': 'test/fixtures/no_upscale.png'}
         ]
       },
       crop: {
@@ -169,7 +162,7 @@
           crop: true
         },
         files: [
-          {&#x27;tmp/crop.png&#x27;: &#x27;test/fixtures/crop.png&#x27;}
+          {'tmp/crop.png': 'test/fixtures/crop.png'}
         ]
       },
       cropGravity: {
@@ -178,10 +171,10 @@
           height: 300,
           upscale: false,
           crop: true,
-          gravity: &#x22;NorthWest&#x22;
+          gravity: "NorthWest"
         },
         files: [
-          {&#x27;tmp/crop_gravity.png&#x27;: &#x27;test/fixtures/crop.png&#x27;}
+          {'tmp/crop_gravity.png': 'test/fixtures/crop.png'}
         ]
       },
       quality: {
@@ -192,7 +185,7 @@
           quality: 0.2
         },
         files: [
-          {&#x27;tmp/quality.jpg&#x27;: &#x27;test/fixtures/quality.jpg&#x27;}
+          {'tmp/quality.jpg': 'test/fixtures/quality.jpg'}
         ]
       },
       autoOrient: {
@@ -202,44 +195,44 @@
           height: 100
         },
         files: [
-          {&#x27;tmp/rotate.jpg&#x27;: &#x27;test/fixtures/rotate.jpg&#x27;}
+          {'tmp/rotate.jpg': 'test/fixtures/rotate.jpg'}
         ]
       },
       all: {
         options: {
           width: 100,
         },
-        src: &#x27;test/fixtures/*.*&#x27;,
-        dest: &#x27;tmp/directory/&#x27;
+        src: 'test/fixtures/*.*',
+        dest: 'tmp/directory/'
       }
     },
 
     // Unit tests.
     nodeunit: {
-      tests: [&#x27;test/*_test.js&#x27;]
+      tests: ['test/*_test.js']
     },
 
     release: {
-      email: &#x27;bot@excellenteasy.com&#x27;,
-      name: &#x27;excellenteasybot&#x27;
+      email: 'bot@excellenteasy.com',
+      name: 'excellenteasybot'
     }
   });
 
-  // Actually load this plugin&#x27;s task(s).
-  grunt.loadTasks(&#x27;tasks&#x27;);
+  // Actually load this plugin's task(s).
+  grunt.loadTasks('tasks');
 
-  require(&#x27;load-grunt-tasks&#x27;)(grunt);
+  require('load-grunt-tasks')(grunt);
 
-  // Whenever the &#x22;test&#x22; task is run, first clean the &#x22;tmp&#x22; dir, then run this
-  // plugin&#x27;s task(s), then test the result.
-  grunt.registerTask(&#x27;test&#x27;, [
-    &#x27;clean&#x27;,
-    &#x27;image_resize&#x27;,
-    &#x27;nodeunit&#x27;
+  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
+  // plugin's task(s), then test the result.
+  grunt.registerTask('test', [
+    'clean',
+    'image_resize',
+    'nodeunit'
   ]);
 
   // By default, lint and run all tests.
-  grunt.registerTask(&#x27;default&#x27;, [&#x27;jshint&#x27;, &#x27;test&#x27;]);
+  grunt.registerTask('default', ['jshint', 'test']);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -253,3 +246,4 @@
     ]
 </div>
 </div>
+</body></html>
